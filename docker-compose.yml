@@ -29,6 +29,8 @@ services:
       ADMIN_PASSWORD: ${ADMIN_PASSWORD}
       YOUTUBE_CLIENT_ID: ${YOUTUBE_CLIENT_ID}
       YOUTUBE_CLIENT_SECRET: ${YOUTUBE_CLIENT_SECRET}
+      TIKTOK_CLIENT_ID: ${TIKTOK_CLIENT_ID}
+      TIKTOK_CLIENT_SECRET: ${TIKTOK_CLIENT_SECRET}
     volumes:
       - postiz-config:/config/
       - postiz-uploads:/uploads/

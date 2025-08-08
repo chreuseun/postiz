@@ -1,1 +1,4 @@
 .env*
+
+#ignore NGINX config files
+nginx.postiz.conf
