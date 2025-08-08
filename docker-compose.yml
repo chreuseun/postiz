@@ -31,7 +31,7 @@ services:
       - postiz-config:/config/
       - postiz-uploads:/uploads/
     ports:
-      - 5001:5000 # machine: localhost:5001 to access Postiz in container: localhost:5000
+      - 5000:5000 # <machine>:<docker_instance>
     networks:
       - postiz-network
     depends_on:
