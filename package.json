@@ -1,0 +1,15 @@
+{
+  "name": "postiz",
+  "version": "1.0.0",
+  "description": "## REFERENCES: - https://www.youtube.com/watch?v=A6CjAmJOWvA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "up": "docker-compose up -d",
+    "down": "docker-compose down",
+    "mac-port-5000": "lsof -i :5000",
+    "kill-port-5000": "kill -9 "
+  },
+  "author": "",
+  "license": "ISC"
+}
