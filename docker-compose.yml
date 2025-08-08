@@ -31,7 +31,7 @@ services:
       - postiz-config:/config/
       - postiz-uploads:/uploads/
     ports:
-      - 5000:5000 # <machine>:<docker_instance>
+      - 5000:5000
     networks:
       - postiz-network
     depends_on:
