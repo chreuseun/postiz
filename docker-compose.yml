@@ -8,7 +8,7 @@ services:
       MAIN_URL: ${DNS_NAME}
       FRONTEND_URL: ${DNS_NAME}
       NEXT_PUBLIC_BACKEND_URL: "http://${DNS_NAME}/api"
-      JWT_SECRET: "6fba7a5f-8a41-4e4a-9c5d-11f2b8a6c7d9" # This is a random secret key for signing JWTs. You can generate your own using `openssl rand -hex 32`.
+      JWT_SECRET: ${JWT_SECRET} # This is a random secret key for signing JWTs. You can generate your own using `openssl rand -hex 32`.
 
       # These defaults are probably fine, but if you change your user/password, update it in the
       # postiz-postgres or postiz-redis services below.
