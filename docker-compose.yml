@@ -5,11 +5,11 @@ services:
     restart: always
     environment:
       # You must change these. Replace `postiz.your-server.com` with your DNS name - this needs to be exactly the URL you're accessing Postiz on.
-      MAIN_URL: "https://postiz.your-server.com"
-      FRONTEND_URL: "https://postiz.your-server.com"
-      NEXT_PUBLIC_BACKEND_URL: "https://postiz.your-server.com/api"
-      JWT_SECRET: "random string that is unique to every install - just type random characters here!"
- 
+      MAIN_URL: ${DNS_NAME}
+      FRONTEND_URL: ${DNS_NAME}
+      NEXT_PUBLIC_BACKEND_URL: "http://${DNS_NAME}/api"
+      JWT_SECRET: "6fba7a5f-8a41-4e4a-9c5d-11f2b8a6c7d9" # This is a random secret key for signing JWTs. You can generate your own using `openssl rand -hex 32`.
+
       # These defaults are probably fine, but if you change your user/password, update it in the
       # postiz-postgres or postiz-redis services below.
       DATABASE_URL: "postgresql://postiz-user:postiz-password@postiz-postgres:5432/postiz-db-local"
@@ -22,11 +22,15 @@ services:
       STORAGE_PROVIDER: "local"
       UPLOAD_DIRECTORY: "/uploads"
       NEXT_PUBLIC_UPLOAD_DIRECTORY: "/uploads"
+      FACEBOOK_APP_ID: ${FACEBOOK_APP_ID}
+      FACEBOOK_APP_SECRET: ${FACEBOOK_APP_SECRET}
+      ADMIN_EMAIL: ${ADMIN_EMAIL}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
     volumes:
       - postiz-config:/config/
       - postiz-uploads:/uploads/
     ports:
-      - 5000:5000
+      - 5001:5000 # machine: localhost:5001 to access Postiz in container: localhost:5000
     networks:
       - postiz-network
     depends_on:
