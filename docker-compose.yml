@@ -27,6 +27,8 @@ services:
       FACEBOOK_REDIRECT_URI: ${FACEBOOK_REDIRECT_URI}
       ADMIN_EMAIL: ${ADMIN_EMAIL}
       ADMIN_PASSWORD: ${ADMIN_PASSWORD}
+      YOUTUBE_CLIENT_ID: ${YOUTUBE_CLIENT_ID}
+      YOUTUBE_CLIENT_SECRET: ${YOUTUBE_CLIENT_SECRET}
     volumes:
       - postiz-config:/config/
       - postiz-uploads:/uploads/
