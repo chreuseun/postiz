@@ -7,7 +7,7 @@ services:
       # You must change these. Replace `postiz.your-server.com` with your DNS name - this needs to be exactly the URL you're accessing Postiz on.
       MAIN_URL: ${DNS_NAME}
       FRONTEND_URL: ${DNS_NAME}
-      NEXT_PUBLIC_BACKEND_URL: "http://${DNS_NAME}/api"
+      NEXT_PUBLIC_BACKEND_URL: "${DNS_NAME}/api"
       JWT_SECRET: ${JWT_SECRET} # This is a random secret key for signing JWTs. You can generate your own using `openssl rand -hex 32`.
 
       # These defaults are probably fine, but if you change your user/password, update it in the
@@ -24,6 +24,7 @@ services:
       NEXT_PUBLIC_UPLOAD_DIRECTORY: "/uploads"
       FACEBOOK_APP_ID: ${FACEBOOK_APP_ID}
       FACEBOOK_APP_SECRET: ${FACEBOOK_APP_SECRET}
+      FACEBOOK_REDIRECT_URI: ${FACEBOOK_REDIRECT_URI}
       ADMIN_EMAIL: ${ADMIN_EMAIL}
       ADMIN_PASSWORD: ${ADMIN_PASSWORD}
     volumes:
