@@ -19,7 +19,7 @@ services:
       DISABLE_REGISTRATION: "false" # Only allow single registration, then disable signup
       # The container images are pre-configured to use /uploads for file storage.
       # You probably should not change this unless you have a really good reason!
-      STORAGE_PROVIDER: "local"
+      STORAGE_PROVIDER: "r2"
       UPLOAD_DIRECTORY: "/uploads"
       NEXT_PUBLIC_UPLOAD_DIRECTORY: "/uploads"
       FACEBOOK_APP_ID: ${FACEBOOK_APP_ID}
