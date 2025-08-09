@@ -20,4 +20,3 @@ find /uploads -type d | while read dir; do
     printf "%-40s | %-8s | %8d | %d\n" "$dir" "$size_h" "$size_b" "$count"
 done | sort -t "|" -k3 -n |
 awk -F "|" '"'"'{printf "%-40s | %-8s | %d file(s)\n", $1, $2, $4}'"'"'
-'
