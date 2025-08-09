@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Note!!!
-# Incase sh check_uploads.sh does not work, run chmod +x check_uploads.sh
+# Incase sh check_uploads.sh does not work, run chmod +x docker_postiz_check_upload.sh
 # This script is designed to run inside the `postiz` Docker container
 
 # Script: check_uploads.sh
