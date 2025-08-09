@@ -19,12 +19,11 @@ services:
       DISABLE_REGISTRATION: "false" # Only allow single registration, then disable signup
       # The container images are pre-configured to use /uploads for file storage.
       # You probably should not change this unless you have a really good reason!
-      STORAGE_PROVIDER: "cloudflare" # local || cloudflare https://github.com/gitroomhq/postiz-app/blob/main/libraries/nestjs-libraries/src/upload/upload.factory.ts
+      STORAGE_PROVIDER: ${STORAGE_PROVIDER} # local || cloudflare https://github.com/gitroomhq/postiz-app/blob/main/libraries/nestjs-libraries/src/upload/upload.factory.ts
       UPLOAD_DIRECTORY: "/uploads"
       NEXT_PUBLIC_UPLOAD_DIRECTORY: "/uploads"
       FACEBOOK_APP_ID: ${FACEBOOK_APP_ID}
       FACEBOOK_APP_SECRET: ${FACEBOOK_APP_SECRET}
-      FACEBOOK_REDIRECT_URI: ${FACEBOOK_REDIRECT_URI}
       ADMIN_EMAIL: ${ADMIN_EMAIL}
       ADMIN_PASSWORD: ${ADMIN_PASSWORD}
       YOUTUBE_CLIENT_ID: ${YOUTUBE_CLIENT_ID}
